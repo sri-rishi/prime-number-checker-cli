@@ -1,13 +1,13 @@
-var readlineSync = require("readline-sync");
-var chalk = require("chalk");
+const readlineSync = require("readline-sync");
+const chalk = require("chalk");
 
-var userName = readlineSync.question(chalk.red("Please! Enter your name- "));
+const userName = readlineSync.question(chalk.red("Please! Enter your name- "));
 
-console.log("Welcome " + userName);
+console.log(`Welcome ${userName}`);
 console.log(chalk.cyan("Is your birthdate is a prime Number?"));
-var score = 0;
+let score = 0;
 function primeNumber(question) {
-  var userNumber = readlineSync.question(question);
+  const userNumber = readlineSync.question(question);
   
   if(isNaN(userNumber)) {
     console.log(chalk.bgRed("Error you have entered wrong type"));
